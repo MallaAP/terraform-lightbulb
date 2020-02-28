@@ -6,7 +6,7 @@ resource "aws_ecs_service" "default" {
   	desired_count   = 3
 
   	load_balancer {
-    	target_group_arn  = "${aws_alb_target_group.default.arn}"
+    	target_group_arn  = "${aws_lb_target_group.default.arn}"
     	container_port    = 80
     	container_name    = "nginx"
 	}
