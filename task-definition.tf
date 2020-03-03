@@ -5,12 +5,12 @@ data "aws_ecs_task_definition" "default" {
 */
 
 resource "aws_ecs_task_definition" "default" {
-    family                = "nginx"
+    family                = "bulbapp"
     container_definitions = <<DEFINITION
 [
   {
-    "name": "nginx",
-    "image": "ganez/helloapp-nginx:v1",
+    "name": "bulbapp",
+    "image": "ganez/helloapp-bulbapp:v1",
     "essential": true,
     "portMappings": [
       {

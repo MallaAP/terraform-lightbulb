@@ -1,5 +1,5 @@
 resource "aws_security_group" "default_lb" {
-  name        = "terraform-ecs-nginx-lb"
+  name        = "terraform-ecs-bulbapp-lb"
   description = "Allow traffic"
   vpc_id      = "vpc-68426b12"
 

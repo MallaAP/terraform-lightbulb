@@ -1,5 +1,5 @@
 resource "aws_lb" "default" {
-  name               = "terraform-ecs-nginx"
+  name               = "terraform-ecs-bulbapp"
   internal           = false
   load_balancer_type = "application"
   security_groups    = ["${aws_security_group.default_lb.id}"]
@@ -22,7 +22,7 @@ resource "aws_lb_listener" "default" {
 }
 
 resource "aws_lb_target_group" "default" {
-  name     = "terraform-ecs-nginx"
+  name     = "terraform-ecs-bulbapp"
   port     = 80
   protocol = "HTTP"
   vpc_id   = "vpc-68426b12"
